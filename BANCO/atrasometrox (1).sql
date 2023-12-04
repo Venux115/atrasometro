@@ -7,9 +7,15 @@
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
+CREATE database atrasometroX;
+
+use atrasometroX;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
+
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;

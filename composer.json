@@ -1,0 +1,20 @@
+{
+    "name": "cedup/atrasometro",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Atrasometro\\entity\\": "model/entity/",
+            "Atrasometro\\controller\\": "controller/",
+            "Atrasometro\\repository\\": "model/repository/",
+            "atrasometro\\config\\": "config/",
+            "atrasometro\\exception\\": "exception/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Venux115",
+            "email": "vag.vinicius.goulart2006@gmail.com"
+        }
+    ],
+    "require": {}
+}

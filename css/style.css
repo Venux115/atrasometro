@@ -1,0 +1,54 @@
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    color: #FFF;
+}
+
+.box {
+    border-radius: 15px;
+    border: 0.1rem solid #A88D1F;
+    padding: 2rem;
+    margin: 4rem;
+    width: 50rem;
+
+}
+
+
+.box.fundo {
+    background: #181920;
+}
+
+.box.head, img {
+    width: 170px;
+}
+
+.box.box.head, h1 {
+    padding: 0;
+    margin: 0;
+}
+
+
+.botao {
+    background: #A88D1F;
+    width: 15rem;
+}
+
+
+a {
+    color: #A88D1F;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    height: 100%;
+    box-sizing: border-box;
+    background: url(../assets/fundo_cedup.png) no-repeat;
+    background-size: cover;
+
+}
