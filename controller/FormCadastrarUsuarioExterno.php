@@ -20,11 +20,16 @@ class FormCadastrarUsuarioExterno implements Controller
         $senha = $_POST['senha'];
         $status = 'Inativo';
         
+        
         $usuario = new Usuarios($nomeusuario, $mail, $senha, $status);
 
-        if($this->repository->add($usuario) === 0)
+        $add = $this->repository->add($usuario);
+        
+        if($add === 0)
         {
             require_once __DIR__ .'/../view/inserir_usuario_externo.php';
+        }else{
+            echo $add;
         }
     }
 }

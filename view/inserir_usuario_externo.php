@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . "/inicio.html"?>
 
-<div class="container" style="widith: 500px; margin-top: 30px;">
+<div class="container" style="widith: 500px; margin-top: 30px; color:#000;">
     <center>
         <h4>Usuário cadastrado com sucesso,</h4>
         <h4>esperando aprovação...</h4>

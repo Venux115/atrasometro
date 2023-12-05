@@ -54,7 +54,7 @@ class UsuarioRepository
         }
     }
 
-    public function add(Usuarios $usuario):int
+    public function add(Usuarios $usuario)
     {
         try {
             $nome = $usuario->getNome();
@@ -73,7 +73,7 @@ class UsuarioRepository
 
             return 0;
         } catch (Exception $e) {
-            return $e->getCode();
+            return  $e->getMessage();
         }
     }
 }
