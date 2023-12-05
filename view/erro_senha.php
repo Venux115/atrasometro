@@ -1,4 +1,4 @@
-<?php require_once "inicio.html";?>
+<?php require_once "/inicio.html";?>
 <main class="container">
     <section class=" erro erro_senha">
         <h1>ERRO</h4>
@@ -6,4 +6,4 @@
         <a href="/" role="button" class="botao">Tentar novamente</a>
     </section>
 </main>
-<?php require_once "fim.html";?>
+<?php require_once "/fim.html";?>

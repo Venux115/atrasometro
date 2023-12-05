@@ -2,6 +2,8 @@
 
 namespace Atrasometro\controller;
 
+use Atrasometro\entity\Usuarios;
+
 class FormCadastrarUsuarioExterno implements Controller
 {
     private $repository;
@@ -18,10 +20,11 @@ class FormCadastrarUsuarioExterno implements Controller
         $senha = $_POST['senha'];
         $status = 'Inativo';
         
+        $usuario = new Usuarios($nomeusuario, $mail, $senha, $status);
 
-        $sql = "INSERT INTO `usuarios`(`nome_usuario`, `mail_usuario`, `senha_usuario`, `status`) VALUES ('$nomeusuario','$mail',md5('$senha'),'$status')";
-
-        $inserir = mysqli_query($conexao, $sql);
-
+        if($this->repository->add($usuario) === 0)
+        {
+            require_once __DIR__ .'/../view/inserir_usuario_externo.php';
+        }
     }
 }

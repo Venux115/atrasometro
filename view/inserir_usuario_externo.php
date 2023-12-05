@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "inicio.html"?>
+<?php require_once __DIR__ . "/inicio.html"?>
 
 <div class="container" style="widith: 500px; margin-top: 30px;">
     <center>
@@ -13,4 +13,4 @@
 
 </div>
 
-<?php require_once __DIR__ . "fim.html"?>
+<?php require_once __DIR__ . "/fim.html"?>
