@@ -1,22 +1,9 @@
-<style>
-    a.botao {
-        background: #A88D1F;
-    }
-
-    a.letra {
-        color: #FFFFFF;
-    }
-</style>
-
-<div class="container body" style="width: 500px; margin-top: 30px;">
-    <div>
-        <h4>ERRO</h4>
-        <br>
-        <h5>Senha incorreta...</h5>
-    </div>
-
-
-    <a href="/" role="button" class="btn botao letra btn-sm">Tentar novamente</a>
-
-
-</div>
+<?php require_once "inicio.html";?>
+<main class="container">
+    <section class=" erro erro_senha">
+        <h1>ERRO</h4>
+        <h2>Senha incorreta...</h5>
+        <a href="/" role="button" class="botao">Tentar novamente</a>
+    </section>
+</main>
+<?php require_once "fim.html";?>

@@ -13,6 +13,13 @@ body {
 
 }
 
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .box.fundo {
     background: #181920;

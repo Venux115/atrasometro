@@ -22,13 +22,13 @@ class LogarController implements Controller
 
         
         switch ($logar) {
-            case true:
+            case 0:
                 header('location:/home');
                 break;
-            case 0:
+            case 1:
                 header('location:/erro_senha');
                 break;
-            case 1:
+            case 2:
                 header('location:/erro_email');
                 break;
             default:

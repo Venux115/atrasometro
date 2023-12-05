@@ -33,7 +33,7 @@ use Exception;
             
             if (md5($senha) == $dados[0]['senha_usuario'])
             {
-                return true;
+                return 0;
             }else{
                 throw new SenhaLoginException();
             }
@@ -58,4 +58,6 @@ use Exception;
                 
             }
         }
+
+        
     }
