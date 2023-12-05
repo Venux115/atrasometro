@@ -4,12 +4,16 @@ use Atrasometro\controller\{
     ErroEmailController,
     LandingPageController,
     LogarController,
-    ErroSenhaController
+    ErroSenhaController,
+    FormCadastrarUsuarioExterno,
+    CadastrarUsuarioExterno
 };
 
 return [
     "GET|/" => LandingPageController::class,
     "POST|/logar" => LogarController::class,
     "GET|/erro_senha" => ErroSenhaController::class,
-    "GET|/erro_email" => ErroEmailController::class
+    "GET|/erro_email" => ErroEmailController::class,
+    "GET|/cadastrar_usuario_externo" => FormCadastrarUsuarioExterno::class,
+    "POST|/cadastrar_usuario_externo"=> CadastrarUsuarioExterno::class
 ];

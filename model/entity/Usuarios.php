@@ -10,13 +10,17 @@ class Usuarios
     private $nivel_usuario;
     private $status;
 
-    public function __construct(string $nome, string $email, string $senha, string $nivel_usuario, string $status)
+    public function __construct(string $nome, string $email, string $senha, string $status)
     {
         $this->id_usuario = $nome;
         $this->mail_usuario = $email;
         $this->senha_usuario = $senha;
-        $this->nivel_usuario = $nivel_usuario;
         $this->status = $status;
+    }
+
+    public function setId($id): void
+    {
+        $this->id_usuario = $id;
     }
 
     public function getNome(): string
@@ -32,5 +36,10 @@ class Usuarios
     public function getEmail(): string
     {
         return $this->mail_usuario;
+    }
+
+    public function getStatus(): string
+    {
+        return $this->status;
     }
 }
