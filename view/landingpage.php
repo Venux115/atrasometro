@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Atrasometro</title>
-    <!--ResetCSS-->
-    <link rel="stylesheet" href="/css/resetCSS.css" />
-    <!-- bootstrap4 -->
-    <link rel="stylesheet" href="/bootstrap5/css/bootstrap.css" />
-
-    <!--CSS-->
-    <link rel="stylesheet" href="css/style.css" />
-</head>
+<?php required_once "inicio.html" ?>
 
 <body>
     <main class="main-content d-flex flex-column align-items-center justify-content-center">
@@ -54,7 +40,4 @@
             </div>
         </div>
     </main>
-</body>
-
-
-</html>
+<?php required_once "fim.html" ?>
