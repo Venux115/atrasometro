@@ -13,7 +13,7 @@ body {
 
 }
 
-.container
+.caixa
 {
     display: flex;
     flex-direction: column;
