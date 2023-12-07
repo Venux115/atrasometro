@@ -8,6 +8,16 @@
     use atrasometro\config\Conexao;
     use Atrasometro\repository\UsuarioRepository;
 
+    function validar():bool
+    {
+        if (!$_SESSION['logado']) {
+            header("Location:/deslogar");
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     $conexao = new Conexao();
     $pdo = $conexao->conectar();
     

@@ -55,7 +55,7 @@
 <nav class="navbar navbar-light  cedupcor">
     <div class="navbar">
         <img src="assets/cedup3.png">
-        <a class="navbar-brand" href="menu.php" style="font-weight: 700;"><!--<i class="fab fa-php"></i>-->&nbsp; <span class="cedup"> Cedup </span> <span class="abilio">Abílio Paulo</span></a>
+        <a class="navbar-brand" href="/home" style="font-weight: 700;"><!--<i class="fab fa-php"></i>-->&nbsp; <span class="cedup"> Cedup </span> <span class="abilio">Abílio Paulo</span></a>
 
         <?php
         if ($nivel != 3) {
@@ -277,7 +277,7 @@
     </div>
 </div>
     <footer class="text-center ">
-        <p>&copy; 2023 - Salvador e Irruan</p>
+        <p>&copy; 2023 - Salvador, Irruan e Vinícius</p>
     </footer>
 
         <?php require_once "fim.html"; ?>
