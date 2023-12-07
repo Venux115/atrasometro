@@ -63,7 +63,7 @@
         ?>
             <a href="atraso.php" class="btn btn-sm botao"><span style="color:#FFF">Tela - Atraso</span></a>
         <?php } ?>
-        <a href="desloga.php" class="btn btn-sm botao"><span style="color:#FFF"><ion-icon name="power"></ion-icon> SAIR</span></a>
+        <a href="/deslogar" class="btn btn-sm botao"><span style="color:#FFF"><ion-icon name="power"></ion-icon> SAIR</span></a>
 
         <div style="color:#FFFFFF">
             <h5>Hora atual: <span id="horaAtual"></span></h5>

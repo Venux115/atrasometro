@@ -7,6 +7,7 @@ use Atrasometro\controller\{
     ErroSenhaController,
     FormCadastrarUsuarioExterno,
     CadastrarUsuarioExterno,
+    DeslogarController,
     homeController
 };
 
@@ -17,5 +18,6 @@ return [
     "GET|/erro_email" => ErroEmailController::class,
     "GET|/cadastrar_usuario_externo" => CadastrarUsuarioExterno::class,
     "POST|/cadastrar_usuario_externo"=> FormCadastrarUsuarioExterno::class,
-    "GET|/home" => homeController::class
+    "GET|/home" => homeController::class,
+    "GET|/deslogar" => DeslogarController::class
 ];
