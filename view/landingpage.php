@@ -1,4 +1,4 @@
-<?php required_once "inicio.html" ?>
+<?php require_once "inicio.html"; ?>
 
 <body>
     <main class="main-content d-flex flex-column align-items-center justify-content-center">
@@ -40,4 +40,4 @@
             </div>
         </div>
     </main>
-<?php required_once "fim.html" ?>
+<?php require_once "fim.html"; ?>
