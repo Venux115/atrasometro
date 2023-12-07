@@ -23,6 +23,8 @@ class LogarController implements Controller
         
         switch ($logar) {
             case 0:
+                $_SESSION['logado'] = true;
+                $_SESSION['email_user'] = $email;
                 header('location:/home');
                 break;
             case 1:

@@ -1,17 +1,5 @@
-<?php
-@session_start();
-
-
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-
-
-<?php
-       if (isset($_SESSION['logado']) && ($_SESSION['logado'] == 1)) {      
-    ?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,18 +37,6 @@
 
 
 
-$usuario = $_SESSION['usuario'];
-
-if(!isset($_SESSION['usuario'])){
-    header('Location: index.php');
-}
-
-include 'conexao.php';
-
-$sql = "SELECT `nivel_usuario` FROM `usuarios` WHERE `mail_usuario` = '$usuario' and `status` = 'Ativo'";
-$buscar = mysqli_query($conexao, $sql);
-$array = mysqli_fetch_array($buscar);
-$nivel = $array['nivel_usuario'];
 
 ?>
 
@@ -306,14 +282,7 @@ $nivel = $array['nivel_usuario'];
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     
-        <?php
-} else{
-    header('Location:negado.php');
-}
-    
 
-
-    ?>
 
 </body>
 
