@@ -30,7 +30,7 @@ class Usuarios
 
     public function getNome(): string
     {
-        return $this->id_usuario;
+        return $this->nome_usuario;
     }
 
     public function getSenha(): string
