@@ -76,4 +76,28 @@ class UsuarioRepository
             return  $e->getMessage();
         }
     }
+
+    public function buscar(string $email)
+    {
+        try {
+            $query = $this->db->prepare("SELECT * FROM `usuarios` WHERE `mail_usuario` = :email and `status` = 'Ativo'");
+            $query->bindParam(":email", $email);
+            $query->execute();
+
+            $userList = $query->fetchAll();
+
+            $usuarios = array_map(
+                function ($dados) {
+                    $usuario = new Usuarios($dados["nome_usuario"], $dados['mail_usuario'], $dados['senha_usuario'], $dados['status']);
+                    $usuario->setNivel($dados['nivel_usuario']);
+                    return $usuario;
+                },
+                $userList
+            );
+
+            return $usuarios;
+        } catch (Exception $e) {
+            return  $e->getMessage();
+        }
+    }
 }
