@@ -25,5 +25,4 @@ return [
     "GET|/deslogar" => DeslogarController::class,
     "GET|/aprovar_usuario" => TabelaAprovarUsuarioController::class,
     "GET|/deletar_usuario" => DeletarUsuarioController::class
-
 ];
