@@ -36,8 +36,8 @@
                     autocomplete="off" required oninput="validaSenha(this)">
                 <small>Precisa ser igual a senha digitada acima.</small>
             </div>
-            <div style="text-align:right;">
-                <a href="index.php" role="button" class="btn botao letra btn-sm">Voltar</a>
+            <div style="text-align:center;">
+                <a href="/" role="button" class="btn botao letra btn-sm">Voltar</a>
                 <button class=" btn btn-sm btn-success" type="submit" id="botao">Cadastrar</button>
             </div>
         </form>

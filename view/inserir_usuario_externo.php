@@ -7,7 +7,7 @@
     </center>
     <div style="padding-top: 20px;">
         <center>
-            <a href="index.php" role="button" class="btn btn-success btn-sm">Voltar ao início</a>
+            <a href="/" role="button" class="btn btn-success btn-sm">Voltar ao início</a>
         </center>
     </div>
 

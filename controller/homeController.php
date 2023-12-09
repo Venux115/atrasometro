@@ -12,6 +12,8 @@ class homeController implements Controller
 
     public function processaRequisicao()
     {
+        validar();
+
         $email_usuario = $_SESSION['email_user'];
         $usuarios = $this->repository->buscar($email_usuario);
         

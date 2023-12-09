@@ -55,7 +55,7 @@
 <nav class="navbar navbar-light  cedupcor">
     <div class="navbar">
         <img src="assets/cedup3.png">
-        <a class="navbar-brand" href="menu.php" style="font-weight: 700;"><!--<i class="fab fa-php"></i>-->&nbsp; <span class="cedup"> Cedup </span> <span class="abilio">Abílio Paulo</span></a>
+        <a class="navbar-brand" href="/home" style="font-weight: 700;"><!--<i class="fab fa-php"></i>-->&nbsp; <span class="cedup"> Cedup </span> <span class="abilio">Abílio Paulo</span></a>
 
         <?php
         if ($nivel != 3) {
@@ -63,7 +63,7 @@
         ?>
             <a href="atraso.php" class="btn btn-sm botao"><span style="color:#FFF">Tela - Atraso</span></a>
         <?php } ?>
-        <a href="desloga.php" class="btn btn-sm botao"><span style="color:#FFF"><ion-icon name="power"></ion-icon> SAIR</span></a>
+        <a href="/deslogar" class="btn btn-sm botao"><span style="color:#FFF"><ion-icon name="power"></ion-icon> SAIR</span></a>
 
         <div style="color:#FFFFFF">
             <h5>Hora atual: <span id="horaAtual"></span></h5>
@@ -269,7 +269,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-user-check"></i>&nbsp Aprovar usuários</h5>
                             <p class="card-text">Aprove os usuários que se cadastraram no sistema por meio externo.</p>
-                            <a href="aprovar_usuario.php" class="btn btn-sm botao letra">Exibir lista</a>
+                            <a href="/aprovar_usuario" class="btn btn-sm botao letra">Exibir lista</a>
                         </div>
                     </div>
                 </div>
@@ -277,7 +277,7 @@
     </div>
 </div>
     <footer class="text-center ">
-        <p>&copy; 2023 - Salvador e Irruan</p>
+        <p>&copy; 2023 - Salvador, Irruan e Vinícius</p>
     </footer>
 
         <?php require_once "fim.html"; ?>

@@ -8,6 +8,16 @@
     use atrasometro\config\Conexao;
     use Atrasometro\repository\UsuarioRepository;
 
+    function validar():bool
+    {
+        if (!$_SESSION['logado']) {
+            header("Location:/deslogar");
+            return false;
+        }else{
+            return true;
+        }
+    }
+
     $conexao = new Conexao();
     $pdo = $conexao->conectar();
     
@@ -18,7 +28,7 @@
         "usuario" => $usuarioRepository,
     ];
 
-    $caminho = $_SERVER['REQUEST_URI'];  
+    $caminho = $_SERVER['PATH_INFO'] ?? "/";  
     $request = $_SERVER['REQUEST_METHOD'];
 
     $Route = require_once __DIR__ ."/config/routes.php";

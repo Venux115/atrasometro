@@ -19,7 +19,7 @@ class UsuarioRepository
     public function logar(string $email, string $senha)
     {
         try {
-            $query = $this->db->prepare("SELECT `mail_usuario`, `senha_usuario` FROM `usuarios` WHERE `mail_usuario` = :email and `status` = 'Ativo' ;");
+            $query = $this->db->prepare("SELECT `mail_usuario`, `senha_usuario`, `nivel_usuario` FROM `usuarios` WHERE `mail_usuario` = :email and `status` = 'Ativo' ;");
             $query->bindParam(":email", $email);
             $query->execute();
 
@@ -33,7 +33,12 @@ class UsuarioRepository
 
 
             if (md5($senha) == $dados[0]['senha_usuario']) {
+
+                $_SESSION['nivel_acesso'] = $dados[0]['nivel_usuario'];
+                var_dump($_SESSION['nivel_acesso']);
+                
                 return 0;
+
             } else {
                 throw new SenhaLoginException();
             }
@@ -98,6 +103,58 @@ class UsuarioRepository
             return $usuarios;
         } catch (Exception $e) {
             return  $e->getMessage();
+        }
+    }
+
+    public function buscarInativos()
+    {
+        try {
+            $query = $this->db->prepare("SELECT * FROM `usuarios`  WHERE status = 'Inativo'");
+            $query->execute();
+
+            $userList = $query->fetchAll();
+
+            $usuarios = array_map(
+                function ($dados) {
+                    $usuario = new Usuarios($dados["nome_usuario"], $dados['mail_usuario'], $dados['senha_usuario'], $dados['status']);
+                    $usuario->setId($dados['id_usuario']);
+                    $usuario->setNivel($dados['nivel_usuario']);
+                    return $usuario;
+                },
+                $userList
+            );
+
+            return $usuarios;
+        } catch (Exception $e) {
+            return  $e->getMessage();
+        }
+    }
+
+    public function aprovar(int $id, string $nivel)
+    {
+        try 
+        {
+            $query = $this->db->prepare("UPDATE `usuarios` SET `status` = 'Ativo', `nivel_usuario`= :nivel WHERE `id_usuario` = :id");
+            $query->bindParam(":id", $id, PDO::PARAM_INT);
+            $query->bindParam(":nivel", $nivel, PDO::PARAM_STR);
+            return $query->execute();
+
+        } catch (Exception $e) 
+        {
+            return $e->getMessage();
+        }
+    }
+
+    public function excluir(int $id)
+    {
+        try
+        {
+            $query = $this->db->prepare("DELETE FROM `usuarios` WHERE id_usuario = :id");
+            $query->bindParam(":id", $id, PDO::PARAM_INT);
+            return $query->execute();
+        } catch (Exception $e)
+        {
+            return $e->getMessage();
         }
     }
 }
