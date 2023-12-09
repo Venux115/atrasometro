@@ -27,6 +27,11 @@ class Usuarios
     {
         $this->nivel_usuario = $nivel;
     }
+    
+    public function getId(): string
+    {
+        return $this->id_usuario;
+    }
 
     public function getNome(): string
     {

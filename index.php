@@ -12,9 +12,9 @@
     {
         if (!$_SESSION['logado']) {
             header("Location:/deslogar");
-            return true;
-        }else{
             return false;
+        }else{
+            return true;
         }
     }
 
@@ -28,7 +28,7 @@
         "usuario" => $usuarioRepository,
     ];
 
-    $caminho = $_SERVER['REQUEST_URI'];  
+    $caminho = $_SERVER['PATH_INFO'] ?? "/";  
     $request = $_SERVER['REQUEST_METHOD'];
 
     $Route = require_once __DIR__ ."/config/routes.php";

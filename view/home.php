@@ -269,7 +269,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-user-check"></i>&nbsp Aprovar usuários</h5>
                             <p class="card-text">Aprove os usuários que se cadastraram no sistema por meio externo.</p>
-                            <a href="aprovar_usuario.php" class="btn btn-sm botao letra">Exibir lista</a>
+                            <a href="/aprovar_usuario" class="btn btn-sm botao letra">Exibir lista</a>
                         </div>
                     </div>
                 </div>
