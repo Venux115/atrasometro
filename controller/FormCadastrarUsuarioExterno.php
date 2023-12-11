@@ -22,6 +22,7 @@ class FormCadastrarUsuarioExterno implements Controller
         
         
         $usuario = new Usuarios($nomeusuario, $mail, $senha, $status);
+        $usuario->setNivel('0');
 
         $add = $this->repository->add($usuario);
         

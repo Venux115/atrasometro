@@ -66,11 +66,13 @@ class UsuarioRepository
             $senha = md5($usuario->getSenha());
             $email = $usuario->getEmail();
             $status = $usuario->getStatus();
+            $nivel = $usuario->getNivel();
 
-            $query = $this->db->prepare("INSERT INTO `usuarios`(`nome_usuario`, `mail_usuario`, `senha_usuario`, `status`) VALUES (:nome,:email,:senha,:statu)");
+            $query = $this->db->prepare("INSERT INTO `usuarios`(`nome_usuario`, `mail_usuario`, `senha_usuario`, `nivel_usuario` ,`status`) VALUES (:nome, :email, :senha, :nivel, :statu)");
             $query->bindParam(":nome", $nome);
             $query->bindParam(":email", $email);
             $query->bindParam(":senha", $senha);
+            $query->bindParam(":nivel", $nivel);
             $query->bindParam(":statu", $status);
             $query->execute();
 

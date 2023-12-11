@@ -256,7 +256,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-user-check"></i>&nbsp Cadastrar usuários</h5>
                             <p class="card-text">Cadastre novos usuários no sistema.</p>
-                            <a href="cadastro_usuario.php" class="btn btn-sm botao letra">Cadastrar novo</a>
+                            <a href="/cadastrar_usuario" class="btn btn-sm botao letra">Cadastrar novo</a>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 use Atrasometro\controller\{
     AprovarUsuarioController,
+    CadastrarNovoUsuario,
     TabelaAprovarUsuarioController,
     ErroEmailController,
     LandingPageController,
@@ -11,6 +12,7 @@ use Atrasometro\controller\{
     CadastrarUsuarioExterno,
     DeletarUsuarioController,
     DeslogarController,
+    FormCadastrarNovoUsuario,
     homeController
 };
 
@@ -24,5 +26,7 @@ return [
     "GET|/home" => homeController::class,
     "GET|/deslogar" => DeslogarController::class,
     "GET|/aprovar_usuario" => TabelaAprovarUsuarioController::class,
-    "GET|/deletar_usuario" => DeletarUsuarioController::class
+    "GET|/deletar_usuario" => DeletarUsuarioController::class,
+    "GET|/cadastrar_usuario" => FormCadastrarNovoUsuario::class,
+    "POST|/cadastrar_usuario" =>CadastrarNovoUsuario::class,
 ];
