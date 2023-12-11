@@ -6,6 +6,7 @@
     
 
     use atrasometro\config\Conexao;
+    use Atrasometro\repository\AlunosRepository;
     use Atrasometro\repository\UsuarioRepository;
 
     function validar():bool
@@ -22,10 +23,12 @@
     $pdo = $conexao->conectar();
     
     $usuarioRepository = new UsuarioRepository($pdo);
+    $alunoRepository = new AlunosRepository($pdo);
 
     $repository =
     [
         "usuario" => $usuarioRepository,
+        "aluno" => $alunoRepository,
     ];
 
     $caminho = $_SERVER['PATH_INFO'] ?? "/";  

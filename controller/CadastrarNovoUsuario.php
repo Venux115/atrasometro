@@ -32,6 +32,9 @@ class CadastrarNovoUsuario
             }else{
                 echo $add;
             }
+        }else
+        {
+        header("Location:/negado");
         }
     }
 }
