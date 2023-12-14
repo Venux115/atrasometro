@@ -13,7 +13,8 @@ use Atrasometro\controller\{
     DeletarUsuarioController,
     DeslogarController,
     FormCadastrarNovoUsuario,
-    homeController
+    homeController,
+    ListarAlunosController,
 };
 
 return [
@@ -29,4 +30,5 @@ return [
     "GET|/deletar_usuario" => DeletarUsuarioController::class,
     "GET|/cadastrar_usuario" => FormCadastrarNovoUsuario::class,
     "POST|/cadastrar_usuario" =>CadastrarNovoUsuario::class,
+    "GET|/listar_alunos" => ListarAlunosController::class,
 ];

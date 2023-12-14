@@ -141,7 +141,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-clipboard-list"></i>&nbsp;Lista de alunos</h5>
                     <p class="card-text">Edite, liste, adicione e exclua os alunos.</p>
-                    <a href="listar_alunos.php" class="btn btn-sm botao letra">Listar alunos</a>
+                    <a href="/listar_alunos" class="btn btn-sm botao letra">Listar alunos</a>
                 </div>
             </div>
         </div>

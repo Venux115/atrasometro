@@ -44,6 +44,7 @@ class AlunosRepository
             alunos.id_aluno,
             alunos.nomealuno,
             alunos.matricula,
+            alunos.cursoaluno,
             cursos.num_curso,
             cursos.nome_curso
             FROM
@@ -53,12 +54,14 @@ class AlunosRepository
             $query->execute();
 
             $alunoList = $query->fetchAll();
+            
 
             $alunos = array_map(
                 function ($dados) {
                     $aluno = new Alunos($dados['matricula'], $dados['nomealuno'], $dados['cursoaluno']);
                     $aluno->setCurso($dados['nome_curso']);
                     $aluno->setTurma($dados['num_curso']);
+                    $aluno->setId($dados['id_aluno']);
                     return $aluno;
                 },
                 $alunoList

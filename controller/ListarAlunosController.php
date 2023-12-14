@@ -4,7 +4,9 @@ namespace Atrasometro\controller;
 
 class ListarAlunosController implements Controller
 {
-    public function __construct(private array $repository)
+    private $repository;
+
+    public function __construct(array $repository)
     {
         $this->repository = $repository["aluno"];
     }
@@ -16,18 +18,10 @@ class ListarAlunosController implements Controller
             
             $nivel = $_SESSION['nivel_acesso'];
 
-            $sql = "SELECT 
-            alunos.id_aluno,
-            alunos.nomealuno,
-            alunos.matricula,
-            cursos.num_curso,
-            cursos.nome_curso
-            FROM
-            alunos   
-            JOIN
-            cursos ON cursos.id_curso = alunos.cursoaluno";
-            $busca = mysqli_query($conexao,$sql);
+            $alunos = $this->repository->all();
 
+
+            require_once __DIR__ . "/../view/listar_alunos.php";
 
         }else
         {

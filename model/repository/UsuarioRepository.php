@@ -102,6 +102,8 @@ class UsuarioRepository
                 $userList
             );
 
+           
+
             return $usuarios;
         } catch (Exception $e) {
             return  $e->getMessage();
